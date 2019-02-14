@@ -1,0 +1,196 @@
+/*$this->mPDF = new mPDF('utf-8', [200, 80], 8, 'arial', 5, 5, 23.5, 4, 3, 0, 'P');*/
+
+/*class mPDF ($mode, $format, $default_font_size, $default_font, $margin_left, $margin_right, $margin_top, $margin_bottom, $margin_header, $margin_footer, $orientation)*/
+
+/*@page {*/
+/*margin-top: 400px;*/
+/*margin-bottom: 300px;*/
+/*}*/
+
+@page { margin: 150px 100px 150px 100px; }
+*{
+    font-family: "arial", Helvetica, sans-serif;
+}
+
+body {
+    font-family: "arial", Helvetica, sans-serif;
+    margin-top: 1000px;
+    /*margin-bottom: 300px;*/
+    text-align: justify;
+}
+
+
+table {
+    margin-top: 0;
+    font-size: 10pt;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table.header-table td, table.header-table th {
+    border-top: 0 !important;
+    font-weight: normal;
+    border-bottom: thin solid #9c9c9c;
+    background-color: white;
+}
+
+table th, td {
+    text-align: left;
+    padding: 1px;
+    /*border-bottom: thin dotted #000;*/
+    font-size: 10pt;
+    font-weight: normal;
+    background-color: white;
+}
+
+table th {
+    text-align: left;
+    border-top: thin dotted #000;
+    border-bottom: thin dotted #000;
+    background-color: white;
+}
+
+h4 {
+    font-size: 7pt;
+}
+
+#invoice-info .column {
+    width: 80px;
+}
+
+#invoice-info, #invoice-info td {
+    border: none;
+}
+
+table.signature td {
+    border: none;
+    padding: 0;
+}
+
+#invoice-detail-table td {
+    /*border: 0;*/
+    /*color: white;*/
+}
+
+
+#header,
+#footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    color: #000;
+    font-size: 10pt;
+}
+
+#header, .header {
+    top: 50px;
+    /*border-bottom: 0.1pt solid #eee;*/
+}
+
+#footer {
+    bottom: 800px;
+    /*border-top: 0.1pt solid #eee;*/
+    background-color: white;
+}
+
+#header table,
+.header table,
+#footer table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+#header td,
+.header td,
+#footer td {
+    padding: 0;
+    /*width: 50%;*/
+}
+
+.page-number {
+    text-align: center;
+}
+
+.page-number:before {
+    content: "Page " counter(page);
+}
+
+#header table th, #header table td,
+.header table th, .header table td {
+    text-align: center;
+    padding: 0;
+    font-size: 10pt;
+    background-color: white;
+    vertical-align: top;
+}
+
+#header table td p.alamat,
+.header table td p.alamat {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 7pt;
+}
+
+.page-break{
+    page-break-after: always;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.title-bordered {
+    border-bottom: 1px solid black;
+}
+
+.subtitle {
+    vertical-align: middle !important;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.top {
+    vertical-align: top;
+}
+
+.border-outside {
+    border: 1px solid black;
+}
+
+.p-100 {
+    padding: 100px;
+}
+
+.border-nominal {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.small {
+    font-size: 8pt !important;
+}
+
+.big {
+    font-size: 12pt !important;
+}
+
+tr.row-head > td {
+    border-bottom: 1px solid black;
+}
+
+tr.row-foot > td {
+    border-top: 1px solid black;
+}
